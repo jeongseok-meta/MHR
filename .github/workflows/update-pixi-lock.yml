@@ -13,6 +13,10 @@ on:
   schedule:
     - cron: "0 6 1 * *" # 06:00 UTC on the first day of each month
   workflow_dispatch:
+  # E2E TEST ONLY (fork throwaway branch)
+  push:
+    branches:
+      - tmp/e2e-update-pixi-lock
   # TEMPORARY: dry run (update and test, no pull request) on the pull request
   # that adds this workflow. Remove before merging.
   pull_request:
